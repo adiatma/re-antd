@@ -15,12 +15,13 @@ npm install @adiatma/re-antd
 # Usage
 
 ```reason
+open AdiatmaReAntd;
 open Antd;
 
 [@react.component]
 let make = () => {
   <Steps>
-    <Steps.Step title="Step 1" />
+    <Steps.Step title="Step 1" status=`process />
     <Steps.Step title="Step 2" />
   </Steps>
 }
