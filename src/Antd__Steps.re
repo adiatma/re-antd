@@ -1,5 +1,5 @@
 [@bs.deriving jsConverter]
-type orientationVariant = [
+type orientation = [
   | [@bs.as "horizontal"] `horizontal
   | [@bs.as "vertical"] `vertical
 ];
@@ -27,41 +27,18 @@ external make:
     ~className: string=?,
     ~_type: typeVariant=?,
     ~current: int=?,
-    ~direction: orientationVariant=?,
-    ~labelPlacement: orientationVariant=?,
+    ~direction: orientation=?,
+    ~labelPlacement: orientation=?,
     ~progressDot: bool=?,
     ~size: sizeVariant=?,
     ~status: statusVariant=?,
     ~initial: int=?,
-    ~onChange: ReactEvent.Mouse.t => unit=?,
-    ~children: React.element=?
+    ~onChange: unit=?,
+    ~children: React.element=?,
+    unit
   ) =>
   React.element =
   "Steps";
-
-let makeProps =
-    (
-      ~_type=`default,
-      ~current=0,
-      ~direction=`horizontal,
-      ~labelPlacement=`horizontal,
-      ~progressDot=false,
-      ~size=`default,
-      ~status=`process,
-      ~initial=0,
-      ~onChange=?,
-    ) =>
-  makeProps(
-    ~_type,
-    ~current,
-    ~direction,
-    ~labelPlacement,
-    ~progressDot,
-    ~size,
-    ~status,
-    ~initial,
-    ~onChange?,
-  );
 
 module Step = {
   [@react.component] [@bs.module "antd"] [@bs.scope "Steps"]
@@ -76,6 +53,4 @@ module Step = {
     ) =>
     React.element =
     "Step";
-  let makeProps = (~status=`wait, ~disabled=false) =>
-    makeProps(~status, ~disabled);
 };
