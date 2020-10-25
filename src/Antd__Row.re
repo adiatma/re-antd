@@ -19,5 +19,3 @@ external make:
   ) =>
   React.element =
   "Row";
-let makeProps = (~align=`top, ~justify=`start) =>
-  makeProps(~align, ~justify);

@@ -1,22 +1,6 @@
-[@bs.deriving jsConverter]
-type shapeVariant = [ | [@bs.as "circle"] `circle | [@bs.as "round"] `round];
-
-[@bs.deriving jsConverter]
-type sizeVariant = [
-  | [@bs.as "large"] `large
-  | [@bs.as "middle"] `middle
-  | [@bs.as "small"] `small
-];
-
-[@bs.deriving jsConverter]
-type appearanceVariant = [
-  | [@bs.as "primary"] `primary
-  | [@bs.as "ghost"] `ghost
-  | [@bs.as "dashed"] `dashed
-  | [@bs.as "link"] `link
-  | [@bs.as "text"] `text
-  | [@bs.as "default"] `default
-];
+type shape = [ | `circle | `round];
+type size = [ | `large | `middle | `small];
+type _type = [ | `primary | `ghost | `dashed | `link | `text | `default];
 
 [@bs.module "antd"] [@react.component]
 external make:
@@ -27,26 +11,15 @@ external make:
     ~ghost: bool=?,
     ~href: string=?,
     ~htmlType: string=?,
-    ~icon: 'a=?,
+    ~icon: React.element=?,
     ~loading: bool=?,
     ~onClick: ReactEvent.Mouse.t => unit=?,
     ~children: React.element=?,
-    ~shape: shapeVariant=?,
-    ~size: sizeVariant=?,
+    ~shape: shape=?,
+    ~size: size=?,
     ~target: string=?,
-    ~_type: appearanceVariant=?
+    ~_type: _type=?,
+    ~style: ReactDOMRe.Style.t=?
   ) =>
   React.element =
   "Button";
-
-let makeProps =
-    (
-      ~block=false,
-      ~danger=false,
-      ~disabled=false,
-      ~ghost=false,
-      ~loading=false,
-      ~_type=`default,
-      ~size=`middle,
-    ) =>
-  makeProps(~block, ~danger, ~disabled, ~ghost, ~_type, ~loading, ~size);

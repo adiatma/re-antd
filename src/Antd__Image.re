@@ -1,5 +1,5 @@
 [@bs.module "antd"] [@react.component]
 external make:
-  (~width: int=?, ~height: int=?, ~src: string=?, ~fallback: string=?) =>
+  (~width: 'a=?, ~height: 'b=?, ~src: string=?, ~fallback: 'a=?) =>
   React.element =
   "Image";
