@@ -27,4 +27,29 @@ let make = () => {
 }
 ```
 
+# Components
+
+- [x] Button
+- [x] Col
+- [x] Row
+- [x] Upload
+- [x] Form
+- [x] DatePicker
+- [x] Icon
+- [x] Image
+- [x] Input
+- [x] Modal
+- [x] Steps
+- [x] Upload
+- [ ] Layout
+- [ ] Typography
+- [ ] Badge
+- [ ] Space
+- [ ] Empty
+- [ ] Avatar
+- [ ] Checkbox
+- [ ] Card
+- [ ] Navigation
+- [ ] [etc](https://ant.design/components/overview/)
+
 For more references check out in [here](https://ant.design/components/overview/).
