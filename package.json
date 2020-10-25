@@ -24,5 +24,8 @@
     "reason-bindings",
     "react",
     "react-reason"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
