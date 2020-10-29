@@ -2,6 +2,17 @@
 
 ReasonML bindings for [Ant Design](https://ant.design).
 
+# Requirements
+
+- `bs-platform: v8.3.1`
+- `reason-react: v0.9.1`
+- `jsx: 3`
+
+# Status
+
+🚧 Work In Progress, These bindings are used successfully in several web, but are not complete yet
+and still subject to change. 
+
 # Install
 
 ```bash
