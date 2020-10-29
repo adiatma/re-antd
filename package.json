@@ -26,6 +26,6 @@
     "react-reason"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   }
 }
