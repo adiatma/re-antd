@@ -14,7 +14,7 @@ external make:
     ~component: React.element=?,
     ~colon: bool=?,
     ~fields: array('a)=?,
-    ~form: ReactEvent.Form.t=?,
+    ~form: Js.t({..})=?,
     ~initialValues: 'b=?,
     ~labelAlign: labelAlign=?,
     ~labelCol: 'c=?,
