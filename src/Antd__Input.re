@@ -5,7 +5,7 @@ external make:
   (
     ~_type: string=?,
     ~value: string=?,
-    ~onChange: ReactEvent.Form.t=?,
+    ~onChange: ReactEvent.Form.t => unit=?,
     ~defaultValue: string=?,
     ~placeholder: string=?,
     ~disabled: bool=?,
@@ -18,7 +18,7 @@ external make:
     ~prefix: React.element=?,
     ~size: size=?,
     ~suffix: React.element=?,
-    ~onPressEnter: ReactEvent.Form.t=?
+    ~onPressEnter: ReactEvent.Form.t => unit=?
   ) =>
   React.element =
   "Input";
@@ -26,7 +26,11 @@ external make:
 module Search = {
   [@bs.module "antd"] [@bs.scope "Input"] [@react.component]
   external make:
-    (~enterButton: 'a=?, ~loading: bool=?, ~onSearch: ReactEvent.Form.t=?) =>
+    (
+      ~enterButton: 'a=?,
+      ~loading: bool=?,
+      ~onSearch: ReactEvent.Form.t => unit=?
+    ) =>
     React.element =
     "Search";
 };

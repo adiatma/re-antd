@@ -1,6 +1,6 @@
 {
   "name": "@adiatma/re-antd",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "ReasonML bindings for Ant Design",
   "main": "src/index.bs.js",
   "repository": "https://github.com/adiatma/re-antd",
