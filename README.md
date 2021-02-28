@@ -1,6 +1,6 @@
 # @adiatma/re-antd
 
-ReasonML bindings for [Ant Design](https://ant.design).
+ReasonML for [Ant Design](https://ant.design).
 
 # Requirements
 
